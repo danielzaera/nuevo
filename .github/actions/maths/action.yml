@@ -1,0 +1,36 @@
+name: "maths"
+
+description: "operations"
+
+inputs:
+  operation-A:
+    description: "valor1"
+    required: true
+    default:
+
+  operation-B:
+    description: "valor2"
+    required: true
+    default: 
+
+  operation:
+    description: "resultodo_total"
+    required: true
+
+outputs:
+  result:
+    description: "result"
+    value: ${{ env.result}}
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo suma ${{ inputs.valor1 }}.
+      shell: bash
+    - id: result
+      run: echo "::set-output name=result-id::$(echo $RESULT)"
+      shell: bash
+    - run: echo result=$result >> $GITHUB_ENV
+      shell: bash          
+    - run: goodbye.sh
+      shell: bash
