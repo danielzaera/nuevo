@@ -1,0 +1,29 @@
+name: JS Actions
+
+on: 
+  push:
+  pull_request:
+    types: [labeled]
+
+jobs:
+
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      
+      - name: suma
+        uses: ./.github/actions/hello-world
+        with:
+          operation-A: 5
+          operation-B: 2
+          operation: suma
+       
+      - name: multiplicacion
+        uses: ./.github/actions/hello-world
+        with:
+          operation-A: 7
+          operation-B: 3
+          operation: multiplicacion
