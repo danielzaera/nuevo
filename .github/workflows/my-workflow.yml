@@ -15,14 +15,14 @@ jobs:
         uses: actions/checkout@v1
       
       - name: suma
-        uses: ./.github/actions/hello-world
+        uses: ./.github/actions/maths
         with:
           operation-A: 5
           operation-B: 2
           operation: suma
        
       - name: multiplicacion
-        uses: ./.github/actions/hello-world
+        uses: ./.github/actions/maths
         with:
           operation-A: 7
           operation-B: 3
