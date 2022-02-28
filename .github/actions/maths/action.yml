@@ -19,18 +19,19 @@ inputs:
 
 outputs:
   result:
-    description: "result"
-    value: ${{ env.result}}
+    description: "result"   
 
 runs:
   using: "composite"
   steps:
-    - run: echo suma ${{ inputs.valor1 }}.
+    - run: |
+         if [ operation=="suma" ] then
+          result=valor1 + valor2
+         fi
+         result=21
+         echo result=$result >> $GITHUB_ENV
+         echo "Mi resultado es: $result"
+         
       shell: bash
-    - id: result
-      run: echo "::set-output name=result-id::$(echo $RESULT)"
-      shell: bash
-    - run: echo result=$result >> $GITHUB_ENV
-      shell: bash          
-    - run: goodbye.sh
-      shell: bash
+ 
+      
