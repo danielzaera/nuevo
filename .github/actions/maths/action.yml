@@ -30,7 +30,7 @@ runs:
           echo "sum of two numbers"
          elif [ operation=="multiplicacion" ] then
            result=valor1 * valor2
-           echo "multipicacion"
+       
          else
            result=valor1 / valor2
            echo operation error exit code 1
