@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-  hello-world:
+  maths:
     runs-on: ubuntu-latest
 
     steps:
