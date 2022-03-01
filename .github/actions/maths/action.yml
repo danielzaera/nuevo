@@ -29,6 +29,8 @@ runs:
           result=valor1 + valor2
          elif [ operation=="resta" ] then
           result=valor1 - valor2
+         else
+           result=valor1 / valor2
          fi
          result=0
          echo result=$result >> $GITHUB_ENV
