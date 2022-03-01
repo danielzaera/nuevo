@@ -25,10 +25,13 @@ runs:
   using: "composite"
   steps:
     - run: |
-         if [ operation-A=="suma" ] then
+         if [ operation=="suma" ] then
           result=valor1 + valor2
-         elif [ operation-B=="multiplicacion" ] then
+          echo "sum of two numbers"
+         elif [ operation=="multiplicacion" ] then
            result=valor1 * valor2
+           echo "multipicacion"
+           exit 0
          else
            echo operation error exit code 1
          fi
