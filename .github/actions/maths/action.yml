@@ -14,7 +14,7 @@ inputs:
     default: 
 
   operation:
-    description: "resultodo_total"
+    description: "resultado_total"
     required: true
 
 outputs:
@@ -28,9 +28,9 @@ runs:
          if [ operation=="suma" ] then
           result=valor1 + valor2
          elif [ operation=="multiplicacion" ] then
-           result=valor1 * valor2
+           result=valor2 * resultado_total
          else
-           echo error code exit-1
+           echo operation error  exit-1
          fi
          result=0
          echo result=$result >> $GITHUB_ENV
