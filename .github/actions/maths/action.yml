@@ -31,7 +31,6 @@ runs:
          elif [ operation=="multiplicacion" ] then
            result=valor1 * valor2
          else
-           result=valor1 / valor2
            echo "operation error exit-1"
          fi
          result=0
