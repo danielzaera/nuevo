@@ -29,7 +29,7 @@ runs:
           result=valor1 + valor2
           echo "sum of two numbers"
          elif [ operation=="multiplicacion" ] ; then
-           result=valor1 x valor2
+           result=valor1 * valor2
          else
            echo "error exit-1"
          fi
