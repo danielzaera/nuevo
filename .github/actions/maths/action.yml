@@ -33,7 +33,7 @@ runs:
          else
            echo "error exit-1"
          fi
-         result=0
+         result=21
          echo result=$result >> $GITHUB_ENV
          echo "Mi resultado es: $result"
          
