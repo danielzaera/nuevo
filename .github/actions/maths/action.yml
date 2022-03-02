@@ -25,7 +25,6 @@ runs:
   using: "composite"
   steps:
     - run: result=0
-    
          if operation == "suma" ; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
