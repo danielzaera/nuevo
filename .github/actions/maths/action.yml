@@ -25,11 +25,11 @@ runs:
   using: "composite"
   steps:
     - run: result=0
-         if [ operation == "suma" ] 
-          result=$operation-A+$operation-B
+         if [ operation == "suma" ] then
+          result= $operation-A + $operation-B
           echo "sum of two numbers"
-         elif [ operation == "multiplicacion" ] 
-           result=$operation-A*$operation-B
+         elif [ operation == "multiplicacion" ] then
+           result= $operation-A * $operation-B
          else
            echo "error exit-1"
          fi
