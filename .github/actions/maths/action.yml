@@ -29,7 +29,7 @@ runs:
          if [ operation = " suma " ] ; then
           result = $operation-A + $operation-B
           echo "sum of two numbers"
-         elif [ operation = " multiplicacion " ] ; then
+         elif [ operation = " multiplicacion " ] 
            result = $operation-A * $operation-B
          else
            echo "error exit-1"
