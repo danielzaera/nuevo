@@ -28,7 +28,7 @@ runs:
          if [ operation = " suma " ] ; then
           result = $operation-A + $operation-B
           echo "sum of two numbers"
-         elif [ operation = " multiplicacion " ] 
+         elif [ operation = " multiplicacion " ] ; then 
            result = $operation-A * $operation-B
          else
            echo "error exit-1"
