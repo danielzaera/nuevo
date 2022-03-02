@@ -26,10 +26,10 @@ runs:
   steps:
     - run: result = 0
         if [ operation=="suma" ] ; then
-          result=$operation-A+$operation-B
+          result=$operation-A + $operation-B
           echo "sum of two numbers"
         elif [ operation=="multiplicacion" ] ; then
-          result=$operation-A*$operation-B
+          result=$operation-A * $operation-B
         else
           echo "error exit-1"
         fi
