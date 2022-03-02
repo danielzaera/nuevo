@@ -28,6 +28,7 @@ runs:
          if operation == "suma" ; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
+         
          elif operation == "multiplicacion" ; then
            result=$operation-A*$operation-B
          else
@@ -35,7 +36,7 @@ runs:
          fi
         
          echo result=$result >> $GITHUB_ENV
-         echo Mi resultado es: $result
+         echo "Mi resultado es: $result"
          
       shell: bash
  
