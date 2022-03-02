@@ -26,10 +26,10 @@ runs:
   steps:
     - run: result=0
     
-         if [ $((A + B)) ] ; then
+         if  $(A + B) ; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
-         elif [ $((a * b)) ] ; then
+         elif [ $(a * b) ; then
            result=$operation-A*$operation-B
          else
            echo "error exit-1"
