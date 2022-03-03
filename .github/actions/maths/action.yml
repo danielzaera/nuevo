@@ -25,10 +25,10 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if [ $operations == valor1 ] then
+       if [ $operations == valor1 ]; then
           result= $operation-A + $operation-B
           echo "sum of two numbers"
-       elif [ $operations == valor2 ] then
+       elif [ $operations == valor2 ]; then
           result= $operation-A * $operation-B
        else
           echo "error exit-1"
