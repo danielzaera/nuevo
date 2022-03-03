@@ -6,12 +6,10 @@ inputs:
   operation-A:
     description: "valor1"
     required: true
-    default:
-
+    
   operation-B:
     description: "valor2"
     required: true
-    default: 
 
   operation:
     description: "resultado_total"
@@ -25,16 +23,18 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if [ $operations == valor1 ] ; then
+       if [ "$operation" == "suma" ]; then
           result= $operation-A + $operation-B
           echo "sum of two numbers"
-       elif [ $operations == valor2 ] ; then
+       elif [ "$operations" == "multiplicacion" ]; then
           result= $operation-A * $operation-B
        else
-          echo "error exit-1"
+          echo "error la operacion no existe!"
+          exit 1
        fi
-          echo result=$result >> $GITHUB_ENV
-          echo "Mi resultado es  $result"
+       
+       echo result=$result >> $GITHUB_ENV
+       echo "Mi resultado es  $result"
          
       shell: bash
  
