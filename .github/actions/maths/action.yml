@@ -24,13 +24,12 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo suma 
-       result = 0
-       if [ $suma ] then
-         result=$operation-A + $operation-B
+    - run: 
+       if echo suma ${{ inputs.valor1 }}
+         result= operation-A + operation-B
           echo "sum of two numbers"
-       elif [ $multiplicacion ] then
-         result=$operation-A * $operation-B
+       elif echo multiplicacion ${{ inputs.valor2 }}
+         result= operation-A * operation-B
        else
          echo "error exit-1"
        fi
