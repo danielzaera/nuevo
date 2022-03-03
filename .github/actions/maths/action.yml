@@ -22,11 +22,11 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: result = 0
-       if[ let operation == "suma" ] ; then
+    - run: 
+       if[ let operation == "suma" ]; then
           result=$operation-A + $operation-B
           echo "sum of two numbers"
-       elif[ let operation == "multiplicacion" ] ; then
+       elif[ let operation == "multiplicacion" ]; then
           result=$operation-A \* $operation-B
        else
           echo "error la operacion no existe!"
