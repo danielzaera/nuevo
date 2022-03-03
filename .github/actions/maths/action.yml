@@ -25,11 +25,11 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if echo operations ${{ inputs.valor1 }}
-          result == $operation-A + $operation-B
+       if [ $operations == valor1 ] then
+          result= $operation-A + $operation-B
           echo "sum of two numbers"
-       elif echo operations ${{ inputs.valor2}} 
-          result == $operation-A * $operation-B
+       elif [ $operations == valor2 ] then
+          result= $operation-A * $operation-B
        else
           echo "error exit-1"
        fi
