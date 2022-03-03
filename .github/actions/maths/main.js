@@ -1,11 +1,11 @@
 const core = require("@actions/core");
 
-const operation = core.getInput("operation");
-const operacion = core.getInput("operation");
+const operation-A = core.getInput("operation-A");
+const operacion-B = core.getInput("operation-B");
 const operation = core.getInput("operation");
 
-console.log(`5 ${operation}`);
-console.log(`2 ${operation}`);
+console.log( suma ${operation}`);
+console.log( suma ${operation}`);
 if (operation) {
-  console.log(`suma ${env.result}`);
+  console.log( result ${env.result}`);
 }
