@@ -26,15 +26,15 @@ runs:
   steps:
     - run: 
        if echo operations ${{ inputs.valor1 }}
-         result= operation-A + operation-B
+          result= operation-A + operation-B
           echo "sum of two numbers"
-       elif 
-         result= operation-A * operation-B
+       elif echo operations ${{ inputs.valor2}}
+          result= operation-A * operation-B
        else
-         echo "error exit-1"
+          echo "error exit-1"
        fi
-         echo result=$result >> $GITHUB_ENV
-         echo "Mi resultado es $result"
+          echo result=$result >> $GITHUB_ENV
+          echo "Mi resultado es  $result"
          
       shell: bash
  
