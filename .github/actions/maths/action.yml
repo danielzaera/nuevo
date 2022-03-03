@@ -23,12 +23,12 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if [ $sum expr operation == "suma" ]; 
+       if [ operation == "suma" ]; 
        then 
-          result= $operation-A + $operation-B
+          result= operation-A + operation-B
           echo "sum of two numbers"
        elif [ expr operation == "multiplicacion" ]; then
-          result= $operation-A * $operation-B
+          result= operation-A \* operation-B
        else
           echo "error la operacion no existe!"
           exit 1
