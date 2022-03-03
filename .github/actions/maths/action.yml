@@ -24,17 +24,17 @@ runs:
   steps:
     - run: 
        if[ let operation == "suma" ]; then
-          result=$operation-A + $operation-B
+          result = $operation-A + $operation-B
           echo "sum of two numbers"
        elif[ let operation == "multiplicacion" ]; then
-          result=$operation-A \* $operation-B
+          result = $operation-A \* $operation-B
        else
           echo "error la operacion no existe!"
           exit 1
        fi
        
        echo result=$result >> $GITHUB_ENV
-       echo "Mi resultado es  $result"
+       echo "Mi resultado es:  $result"
          
       shell: bash
  
