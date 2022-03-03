@@ -23,8 +23,8 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if [ expr operation == "suma" ]; 
-       then
+       if [ $sum expr operation == "suma" ]; then 
+       
           result= $operation-A + $operation-B
           echo "sum of two numbers"
        elif [ expr operation == "multiplicacion" ]; then
