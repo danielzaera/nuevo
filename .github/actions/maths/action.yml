@@ -25,10 +25,10 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if echo suma ${{ inputs.valor1 }}
+       if $suma {{ inputs.valor1 }}
          result= operation-A + operation-B
           echo "sum of two numbers"
-       elif echo multiplicacion ${{ inputs.valor2 }}
+       elif $multiplicacion {{ inputs.valor2 }}
          result= operation-A * operation-B
        else
          echo "error exit-1"
