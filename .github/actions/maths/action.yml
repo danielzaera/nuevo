@@ -24,7 +24,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: 
+    - run: result = 0
        if [ $suma ] then
          result=$operation-A + $operation-B
           echo "sum of two numbers"
@@ -34,7 +34,7 @@ runs:
          echo "error exit-1"
        fi
          echo result=$result >> $GITHUB_ENV
-         echo "Mi resultado es $result"
+         echo "Mi resultado es: $result"
          
       shell: bash
  
