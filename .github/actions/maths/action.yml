@@ -23,11 +23,11 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if [ operation == "suma" ]; 
+       if [ expr operation == "suma" ]; 
        then
           result= $operation-A + $operation-B
           echo "sum of two numbers"
-       elif [ operation == "multiplicacion" ]; 
+       elif [ expr operation == "multiplicacion" ]; 
        then
           result= $operation-A * $operation-B
        else
