@@ -23,10 +23,11 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if echo suma $[ inputs.operation == "suma"]; then
+       if echo suma ${{ inputs.valor1 }}.
           result=$operation-A+$operation-B
           echo "sum of two numbers"
-       elif echo multiplicacion $[ outputs.operation == "multiplicacion" ]; then
+    - id: result
+       elif echo "::set-output result-id::$(echo $result)"
           result=$operation-A*$operation-B
        else
           echo "error la operacion no existe!"
