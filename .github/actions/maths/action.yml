@@ -24,10 +24,10 @@ runs:
   steps:
     - run: 
        if [ -e $operation == "suma" ]; then
-          result=$operation-A + $operation-B
+          result=$operation-A+$operation-B
           echo "sum of two numbers"
        elif [ -e $operation == "multiplicacion" ]; then
-          result=$operation-A \* $operation-B
+          result=$operation-A\*$operation-B
        else
           echo "error la operacion no existe!"
           exit 1
