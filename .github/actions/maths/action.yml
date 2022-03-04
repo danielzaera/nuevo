@@ -23,7 +23,7 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if[ inputs.operation $number + 2 =="suma" ]; then
+       if[ inputs.operation $valor1+$valor2 =="suma" ]; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
        elif[ outputs.operation =="multiplicacion" ]; then
