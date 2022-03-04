@@ -22,7 +22,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: 
+    - run: result = 0
        if echo suma ${{ inputs.valor1 }}.
           result=$operation-A+$operation-B
           echo "sum of two numbers"
