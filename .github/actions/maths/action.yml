@@ -23,7 +23,7 @@ runs:
   using: "composite"
   steps:
     - run: 
-       if[ inputs.operation echo $operation-A =="suma" ]; then
+       if[ inputs.operation $result =="suma" ]; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
        elif[ outputs.operation =="multiplicacion" ]; then
@@ -34,7 +34,7 @@ runs:
        fi
        
        echo result=$result >> $GITHUB_ENV
-       echo " Mi resultado es = $result "
+       echo " Mi resultado es: $result "
          
       shell: bash
  
