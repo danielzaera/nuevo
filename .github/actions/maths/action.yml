@@ -23,10 +23,10 @@ runs:
   using: "composite"
   steps:
     - run: result = 0
-       if echo suma $[ inputs.operation == "suma" ]; then
+       if echo suma $[ inputs.operation == "suma" ] ; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
-       elif echo set-output $[ outputs.operation == "multiplicacion" ]; then
+       elif echo set-output $[ outputs.operation == "multiplicacion" ] ; then
           result=$operation-A*$operation-B
        else
           echo "error la operacion no existe!"
