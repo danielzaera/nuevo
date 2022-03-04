@@ -34,7 +34,7 @@ runs:
        fi
        
        echo result=$result >> $GITHUB_ENV
-       echo " Mi resultado es: $result "
+       echo "Mi resultado es $result"
          
       shell: bash
  
