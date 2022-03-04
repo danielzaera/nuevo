@@ -23,10 +23,10 @@ runs:
   using: "composite"
   steps:
     - run: result = 0
-       if[ inputs.operation == "suma" ] ; then
+       if[ inputs.operation == "suma" ]; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
-       elif[ outputs.operation == "multiplicacion" ] ; then
+       elif[ outputs.operation == "multiplicacion" ]; then
           result=$operation-A*$operation-B
        else
           echo "error la operacion no existe!"
