@@ -26,7 +26,7 @@ runs:
        if echo suma $[ inputs.operation == "suma" ]; then
           result=$operation-A+$operation-B
           echo "sum of two numbers"
-       elif echo "::set-output [ operation == "multiplicacion" ]; then
+       elif echo ::set-output [ operation == "multiplicacion" ]; then
           result=$operation-A\*$operation-B
        else
           echo "error la operacion no existe!"
