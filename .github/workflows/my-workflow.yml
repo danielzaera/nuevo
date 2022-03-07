@@ -35,3 +35,10 @@ jobs:
           operation-A: ${{ env.result }}
           operation-B: 50
           operation: resta
+
+      - name: division
+        uses: ./.github/actions/maths
+        with:
+          operation-A: ${{ env.result }}
+          operation-B: 90
+          operation: division
