@@ -24,10 +24,10 @@ runs:
   steps:
     - run: |
        result=0
-       if [ "${{ inputs.operation }}" =="suma" ]; then
+       if [ "${{ inputs.operation }}" == "suma" ]; then
           result=${{ inputs.operation-A }}+${{ inputs.operation-B}}
           echo "sum of two numbers"
-       elif [ "${{ inputs.operation }}" =="multiplicacion" ]; then
+       elif [ "${{ inputs.operation }}" == "multiplicacion" ]; then
           result=${{ inputs.operation-A }}*${{ inputs.operation-B}}
        else
           echo "error la operacion no existe!"
