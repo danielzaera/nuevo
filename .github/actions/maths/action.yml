@@ -31,6 +31,8 @@ runs:
           result=${{ inputs.operation-A }}*${{ inputs.operation-B}}
        elif [ "${{ inputs.operation }}" == "resta" ]; then
           result=${{ inputs.operation-A }}-${{ inputs.operation-B}}
+       elif [ "${{ inputs.operation }}" == "division" ]; then
+          result=${{ inputs.operation-A }}/${{ inputs.operation-B}}
        else
           echo "error la operacion no existe!"
           exit 1
