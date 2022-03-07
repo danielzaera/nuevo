@@ -40,5 +40,5 @@ jobs:
         uses: ./.github/actions/maths
         with:
           operation-A: ${{ env.result }}
-          operation-B: 90
+          operation-B: 4
           operation: division
