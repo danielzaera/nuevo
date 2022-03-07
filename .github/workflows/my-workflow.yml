@@ -18,7 +18,7 @@ jobs:
         uses: ./.github/actions/maths
         with:
           operation-A: 5
-          operation-B: 2
+          operation-B: 55
           operation: suma
        
       - name: multiplicacion
