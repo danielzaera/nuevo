@@ -24,6 +24,6 @@ jobs:
       - name: multiplicacion
         uses: ./.github/actions/maths
         with:
-          operation-A: ${{ env.result }}
-          operation-B: 3
+          operation-A: 15
+          operation-B: ${{ env.result }}
           operation: multiplicacion
