@@ -12,7 +12,7 @@ inputs:
     required: true
 
   operation:
-    description: "resultado_total"
+    description: "operacion "
     required: true
 
 outputs:
@@ -22,12 +22,13 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: 
-       if [ inputs.operation == suma ]; then
-          result=$operation-A+$operation-B
+    - run: |
+       result=0
+       if [ {{ inputs.operation }} =="suma" ]; then       
+          result={{ inputs.operation-A }}+{{ inputs.operation-B}}
           echo "sum of two numbers"
-       elif [ outputs.operation =="multiplicacion" ]; then
-          result=$operation-A*$operation-B
+       elif[ {{ inputs.operation }} =="multiplicacion" ]; then       
+          result={{ inputs.operation-A }}*{{ inputs.operation-B}}
        else
           echo "error la operacion no existe!"
           exit 1
