@@ -27,3 +27,11 @@ jobs:
           operation-A: 15
           operation-B: ${{ env.result }}
           operation: multiplicacion
+
+
+      - name: resta
+        uses: ./.github/actions/maths
+        with:
+          operation-A: ${{ env.result }}
+          operation-B: 50
+          operation: resta
