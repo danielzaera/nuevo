@@ -42,3 +42,8 @@ jobs:
           operation-A: ${{ env.result }}
           operation-B: 4
           operation: division
+          
+          
+      # Use the output from the `maths` step
+      - name: result
+        run: echo " el resultado es ${{ env.result }} "
